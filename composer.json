@@ -5,7 +5,10 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+		"dompdf/dompdf" : "dev-master",
+		"stripe/stripe-php" : "dev-master",
+		"fzaninotto/faker" : "dev-master"
 	},
 	"autoload": {
 		"classmap": [
