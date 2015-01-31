@@ -2,6 +2,17 @@
 
 class DatabaseSeeder extends Seeder {
 
+	protected $faker;
+	
+	public function getFaker()
+	{
+		if(empty($this->faker))
+		{
+			$this->faker = Faker\Factory::create();
+		}
+		
+		return $this->faker;
+	}
 	/**
 	 * Run the database seeds.
 	 *
@@ -11,7 +22,7 @@ class DatabaseSeeder extends Seeder {
 	{
 		Eloquent::unguard();
 
-		// $this->call('UserTableSeeder');
+		 $this->call("AccountTableSeeder");
 	}
 
 }

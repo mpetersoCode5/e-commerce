@@ -12,16 +12,17 @@ class CreateAccountTable extends Migration {
 	 */
 	public function up()
 	{
-		Schame::create("account", function($table)
+		Schema::create("account", function($table)
 		{
 			$table->engine = "InnoDB";
 			
 			$table->increments("id");
 			$table->string("email");
 			$table->string("password");
+			$table->string("remember_token")->nullable();
 			$table->dateTime("created_at");
 			$table->dateTime("updated_at");
-			$table->dateTime("deleted_at");
+			$table->dateTime("deleted_at")->nullable();
 		});
 	}
 
